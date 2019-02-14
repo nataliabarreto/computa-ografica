@@ -17,5 +17,10 @@ Rasterizando um ponto (Put Pixel)
 Rasterizando uma linha (Draw Line)
 
   A rasterirização da linha é feita através do algoritmo de Bresenham (algoritmo do ponto médio) no qual se tem que os píxels que possui a reta devem ser contínuo, porém esse algoritmo é apenas para um octante (se calculam os pontos de 0º a 45º) e temos que modificá-lo para os outros octantes.
+  A função DrawLine() propõe a união de dois pontos por uma reta e além disso, se esses pontos tiverem cores diferentes temos que interpolar essas cores.
+  
+Rasterizando um triângulo (Draw Triangle)
+
+   Com a função DrawLine implementada e a interpolação também, então foi só chamar três vezes essa mesma função com o ponto 1 ligando com o ponto 2, o ponto 2 ligando com o ponto 3 e o ponto 3 ligando com o ponto 1, para implementar a função DrawTriangle.
     
     
