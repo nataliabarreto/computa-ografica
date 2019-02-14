@@ -32,7 +32,7 @@ O trabalho proposto tem como objetivo desenvolver três funções:
 </p>
 ## Rasterizando um triângulo (Draw Triangle)
 
-   Com a função DrawLine implementada e a interpolação também, então foi só chamar três vezes essa mesma função com o ponto 1 ligando com o ponto 2, o ponto 2 ligando com o ponto 3 e o ponto 3 ligando com o ponto 1, para implementar a função DrawTriangle.
+   Com a função DrawLine implementada e a interpolação também, então foi só chamar três vezes essa mesma função com o ponto 1 ligando com o ponto 2, o ponto 2 ligando com o ponto 3 e o ponto 3 ligando com o ponto 1, para implementar a função DrawTriangle.  
 
 <p align="center">
 	<br>
