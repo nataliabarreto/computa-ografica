@@ -3,9 +3,9 @@ Implementação dos algoritmos para rasteirização de pontos e linhas
 
 O trabalho proposto tem como objetivo desenvolver três funções:
 
-1-PutPixel: Rasterizar um ponto na memória de vídeo, recebendo os parâmetros da posição do pixel (x,y) e sua cor (RGBA);
-2- DrawLine: Rasterizar uma linha na tela usando o algoritmo de  Bresenham, recebendo como parâmetros os seus vértices e as cores de cada vértice e ao longo da linha rasterizada as cores dos pixels devem se interpolar;
-3- DrawTriangle: Função que desenha um triângulo na tela, recebendo como parâmetros as posições dos três vértices e as cores (RGBA) de cada um dos vértices.
+1. PutPixel: Rasterizar um ponto na memória de vídeo, recebendo os parâmetros da posição do pixel (x,y) e sua cor (RGBA);
+2. DrawLine: Rasterizar uma linha na tela usando o algoritmo de  Bresenham, recebendo como parâmetros os seus vértices e as cores de cada vértice e ao longo da linha rasterizada as cores dos pixels devem se interpolar;
+3. DrawTriangle: Função que desenha um triângulo na tela, recebendo como parâmetros as posições dos três vértices e as cores (RGBA) de cada um dos vértices.
 
 ## Rasterizando um ponto (Put Pixel)
 
@@ -23,4 +23,7 @@ O trabalho proposto tem como objetivo desenvolver três funções:
 
    Com a função DrawLine implementada e a interpolação também, então foi só chamar três vezes essa mesma função com o ponto 1 ligando com o ponto 2, o ponto 2 ligando com o ponto 3 e o ponto 3 ligando com o ponto 1, para implementar a função DrawTriangle.
     
-    
+## Equipe
+
+- Edimar Bezerra da Silva Neto 
+- Natalia Caroline Guedes Barreto
