@@ -13,6 +13,7 @@ O trabalho proposto tem como objetivo desenvolver três funções:
   O RGBA representa o padrão de cores em inglês, em que são: vermelho (red), verde (green), azul (blue) e alpha (transparência). O valor do “r,g,b,a” varia de 0 a 255.
   Para implementação dessa função criamos uma classe com a posição “x,y” e a cor “RGBA”. 
   Para saber em que posição de memória deverá ser gravado o pixel, temos que entender o cálculo do offset, a explicação por trás desse cálculo é o seguinte, um píxel possui 4 bytes e em cada byte desses define-se uma cor.
+  O ponto a seguir esta na posição (256,256) e RGBA(255,255,255,255)
   <p align="center">
 	<br>
 	<img src="./prints/putPixel.png"/ width=510px height=540px>
@@ -22,7 +23,7 @@ O trabalho proposto tem como objetivo desenvolver três funções:
 ## Rasterizando uma linha (Draw Line)
 
   A rasterirização da linha é feita através do algoritmo de Bresenham (algoritmo do ponto médio) no qual se tem que os píxels que possui a reta devem ser contínuo, porém esse algoritmo é apenas para um octante (se calculam os pontos de 0º a 45º) e temos que modificá-lo para os outros octantes.
-  A função DrawLine() propõe a união de dois pontos por uma reta e além disso, se esses pontos tiverem cores diferentes temos que interpolar essas cores.
+  A função DrawLine() propõe a união de dois pontos por uma reta e além disso, foi pedido para se esses pontos tiverem cores diferentes teremos que interpolar essas cores.
  <p align="center">
 	<br>
 	<img src="./prints/drawline.png"/ width=510px height=540px>
@@ -42,7 +43,14 @@ O trabalho proposto tem como objetivo desenvolver três funções:
 	<img src="./prints/allandabout.png"/ width=510px height=540px>
 	<br>
 </p>
+
 ## Equipe
 
 - Edimar Bezerra da Silva Neto 
 - Natalia Caroline Guedes Barreto
+
+## Referências
+
+https://icglima20152.wordpress.com/
+https://github.com/ThiagoLuizNunes/CG-Assignments
+PAGOT, Christian Azambuja. Rasterization: Lecture 2.
