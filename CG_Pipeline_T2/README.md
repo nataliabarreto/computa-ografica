@@ -3,20 +3,8 @@ Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasteri
 ESPAÇO DO OBJETO:
 Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
 
-O que isso quer dizer?
-
-Quer dizer que é nesse espaço que efetuamos as transformações de:
-
-Escala
-
-Rotação
-
-Translação
-
-Espelhamento (mirroring)
-
-Shear
-
+O que isso quer dizer? Quer dizer que é nesse espaço que efetuamos as transformações de:Escala
+,Rotação, Translação,Espelhamento (mirroring), Shear.
 Essas transformações são realizadas através da manipulação de matrizes e isso é facilitado com o objeto na origem.
 
 Temos aqui a matriz model, na qual leva o objeto do espaço do objeto para o espaço do universo.
