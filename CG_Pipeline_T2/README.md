@@ -106,57 +106,7 @@ ESPAÇO CANÔNICO:
 ESPAÇO DE TELA:
 Nesse espaço trabalharemos com as coordenadas no espaço canônico e é onde nosso objeto irá ser rasterizado.
 
-TRANSFORMAÇÕES GEOMÉTRICAS
 
-Após alguns conceitos importantes vamos começar a falar das transformações geométricas. Seus tipos já foram citados no espaço do objeto e, além disso, também falaremos de algumas definições que ficaram em aberto em algumas ocasiões no nosso texto.
-
-As transformações geométricas podem ser classificadas em:
-
-  Transformações lineares: que são aquelas que podem ser expressas em forma de matriz. E como exemplo desse tipo de transformações temos: escala, rotação e shear.
-  Transformações afins: preserva o paralelismo entre duas linhas e além de possuir todas as transformações lineares possui também a translação.
-  Transformação projetiva: não preserva o paralelismo entre duas linhas e além de possuir todas as transformações afins também possui coordenadas homogêneas.
-
-Após descritas como as transformações podem ser classificadas, iremos detalhar seus tipos.
-
-1. ESCALA
-Altera as dimensões do objeto em estudo, isto é, quando queremos diminuir ou aumentar o tamanho do objeto.
-Há dois tipos de escalas,
-
-   Isotrópica: quando os fatores de escala são iguais (Sx = Sy).
-   Anisotrópica: quando os fatores de escala são diferentes (Sx ≠ Sy).
-
- 
-2. ESPELHAMENTO (MIRRORING)
-
-Nessa  característica temos que o nosso objeto quando atribuido a isso, espelhamos um de nossos eixos ou os dois eixos:
-
-   Eixo x: Sx = -1 e Sy = 1;
-   Eixo y: Sx = 1 e Sy = -1;
-   Ambos os eixos: Sx = -1 e Sy = -1;
-    
- 3. SHEAR
-
-Nessa transformação distorcemos o objeto em um eixo ou em ambos. Sendo assim,  podemos fixar um ponto e mudar a coordenada de outro eixo.
-
-4. ROTAÇÃO
-
-Nesse tipo de transformação temos a alteração da direção do objeto. Desse modo, rotacionamos o nosso objeto com um ângulo θ em relação à origem.
-
-5. TRANSLAÇÃO
-
-A translação é exemplo de uma transformação que não pode ser expressa por matriz, porém representamos a  combinação de muitas transformações em uma única matriz e sendo assim, temos que arrumar alguma forma de representar a translação em uma multiplicação de matriz e a solução é usar as coordenadas homogêneas (HC).
-
-As coordenadas homogêneas tem por função colocar mais uma dimensão na matriz, no qual em 2D será representado por: (x,y,h). Se o valor de h for diferente de 1, dividimos o x e o y pelo valor de h (x/h, y/h, 1).
-
-Até aqui só falamos das transformações em 2D, mas também podemos representá-las em 3D. Nessa dimensão também expressamos com as coordenadas homogêneas e dessa forma vamos ter 4 elementos no espaço euclidiano (x,y,z) –> (x,y,z,h).
-
-MATRIZ DE PROJEÇÃO
-
-Sabendo da transformação da matriz View, vamos passar o sistema de coordenadas que possuímos para o espaço projetivo. Para conseguir essa transformação usamos a matriz de projeção, na qual irá projetar os nossos pontos  que estão no espaço da câmera para o View Plane.
-
-Temos como matriz de projeção:
-
-imagem
 
 DESENVOLVIMENTO
 
