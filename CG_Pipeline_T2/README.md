@@ -3,19 +3,19 @@ imagem
 
 ESPAÇO DO OBJETO: Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
 
-O que isso quer dizer? Quer dizer que é nesse espaço que efetuamos as transformações de:Escala
-,Rotação, Translação,Espelhamento (mirroring), Shear.
+O que isso quer dizer? Quer dizer que é nesse espaço que efetuamos as transformações de:Escala, Rotação, Translação, Espelhamento (mirroring), Shear.
 Essas transformações são realizadas através da manipulação de matrizes e isso é facilitado com o objeto na origem.
 
 Temos aqui a matriz model, na qual leva o objeto do espaço do objeto para o espaço do universo.
 
 ESPAÇO DO UNIVERSO: Espaço que reúne todos os objetos em um espaço só. É através desse espaço que podemos visualizar o objeto na tela.
 
-ESPAÇO DA CÂMERA: Expõe os vértices com a câmera na origem. A nossa câmera possui:
+ESPAÇO DA CÂMERA:Expõe os vértices com a câmera na origem. A nossa câmera possui:
 
 Posição (px, py, pz)
 Direção (dx, dy, dz)
 Vetor up (ux, uy, uz)
+
 Obs.: Nesse espaço há a simplificação das projeções 3D para 2D, pois usamos coordenadas homogêneas (esse conceito será visto mais a frente).
 
 Para a construção do sistema de coordenadas da máquina de lavar a câmara, o X está apontando para o seguinte na imagem a seguir:
@@ -23,9 +23,9 @@ Para a construção do sistema de coordenadas da máquina de lavar a câmara, o 
  
 Diante disso, vamos calcular :
 
-    Para calcular o Zc iniciamos subtraindo a posição da câmera com a câmera lookat e  dividimos pela norma.
-    Para calcular o Xc pegamos vetor Up e fazemos o produto vetorial com o Zc, dividindo pela sua norma.
-    Para calcular o Yc fazemos o produto vetorial de Zc e Xc e dividimos pela norma.
+   Para calcular o Zc iniciamos subtraindo a posição da câmera com a câmera lookat e  dividimos pela norma.
+   Para calcular o Xc pegamos vetor Up e fazemos o produto vetorial com o Zc, dividindo pela sua norma.
+   Para calcular o Yc fazemos o produto vetorial de Zc e Xc e dividimos pela norma.
 
 Logo abaixo temos respectivamente essas operações:
 imagem
@@ -41,15 +41,16 @@ Para a construção dessa matriz usamos as coordenadas encontradas anteriormente
 (Zcx, Zcy, Zcz)
 
 Então,
-    |   Xcx    Ycx    Zcx   |
 
-B = |   Xcy    Ycy     Zcy  |
+   |   Xcx    Ycx    Zcx   |
 
-    |   Xcz    Ycz     Zcz  |
+B =|   Xcy    Ycy     Zcy  |
+
+   |   Xcz    Ycz     Zcz  |
     
     imagem
     
-ESPAÇO DE RECORTE (Clipping):
+ESPAÇO DE RECORTE (Clipping): 
 
 O espaço de recorte está entre o espaço da câmera e o espaço canônico (definiremos mais a frente).
 
@@ -62,7 +63,7 @@ ESPAÇO CANÔNICO:
 
 É nesse espaço que asseguramos o que vai exibir na tela, pois é aqui onde ocorre o mapeamento dos vértices para centralizar o volume obtido no espaço da câmera para o espaço canônico.
 
-ESPAÇO DE TELA
+ESPAÇO DE TELA:
 Nesse espaço trabalharemos com as coordenadas no espaço canônico e é onde nosso objeto irá ser rasterizado.
 
 TRANSFORMAÇÕES GEOMÉTRICAS
@@ -81,17 +82,17 @@ Após descritas como as transformações podem ser classificadas, iremos detalha
 Altera as dimensões do objeto em estudo, isto é, quando queremos diminuir ou aumentar o tamanho do objeto.
 Há dois tipos de escalas,
 
-    Isotrópica: quando os fatores de escala são iguais (Sx = Sy).
-    Anisotrópica: quando os fatores de escala são diferentes (Sx ≠ Sy).
+   Isotrópica: quando os fatores de escala são iguais (Sx = Sy).
+   Anisotrópica: quando os fatores de escala são diferentes (Sx ≠ Sy).
 
  
 2. ESPELHAMENTO (MIRRORING)
 
 Nessa  característica temos que o nosso objeto quando atribuido a isso, espelhamos um de nossos eixos ou os dois eixos:
 
-    Eixo x: Sx = -1 e Sy = 1;
-    Eixo y: Sx = 1 e Sy = -1;
-    Ambos os eixos: Sx = -1 e Sy = -1;
+   Eixo x: Sx = -1 e Sy = 1;
+   Eixo y: Sx = 1 e Sy = -1;
+   Ambos os eixos: Sx = -1 e Sy = -1;
     
  3. SHEAR
 
