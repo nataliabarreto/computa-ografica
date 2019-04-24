@@ -122,16 +122,15 @@ Vamos sair do espaço do objeto para o espaço do universo (matriz model), isto 
 
 Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do eixo x, matriz de rotação em torno do eixo y, matriz de rotação em torno do eixo z e a matriz de escala e translação.
 
-<p align="center">
+<p align="left">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-19-08.png"/ >
 	<br>
 </p>
 
 ### Transformação: Espaço do Universo → Espaço da Câmera
-Após, queremos passar do espaço do universo para o espaço da câmera, com os produtos vetoriais que foram explicados anteriormente, isto é, a matriz view.
 
-<p align="center">
+<p align="leftr">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-20-34.png"/ >
 	<br>
@@ -139,7 +138,7 @@ Após, queremos passar do espaço do universo para o espaço da câmera, com os 
 
 ### Transformação: Espaço da Câmera → Espaço Projetivo ou de Recorte
 
-<p align="center">
+<p align="left">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-20-54.png"/ >
 	<br>
@@ -148,7 +147,7 @@ Após, queremos passar do espaço do universo para o espaço da câmera, com os 
 ### Transformação: Espaço de Recorte → Espaço “Canônico” 
 E sendo assim, iremos para a tela:
 
-<p align="center">
+<p align="left">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-24-50.png"/ >
 	<br>
@@ -156,7 +155,7 @@ E sendo assim, iremos para a tela:
 
 ### Transformação: Espaço Canônico → Espaço de Tela
 
-<p align="center">
+<p align="left">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-21-38.png"/ >
 	<img src="./Prints/Captura de tela de 2019-04-23 17-21-24.png"/ >
