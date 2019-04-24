@@ -8,7 +8,7 @@ Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasteri
 	<br>
 </p>
 
-## Passos do Pipeline Gráfico
+## Partes do Pipeline Gráfico
 
 ## ESPAÇO DO OBJETO:
 Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
@@ -116,7 +116,7 @@ Nesse espaço trabalharemos com as coordenadas no espaço canônico e é onde no
 ## DESENVOLVIMENTO
 
 Com as transformações, que podemos aplicar ao nosso objeto devidamente explicadas iremos usá-las.
-
+### Transformação: Espaço do Objeto → Espaço do Universo
 Vamos sair do espaço do objeto para o espaço do universo (matriz model), isto é, reunir o que temos de objetos em um só espaço para poder visualizar na tela, aplicando as transformações: rotação, translação e escala.
 
 Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do eixo x, matriz de rotação em torno do eixo y, matriz de rotação em torno do eixo z e a matriz de escala e translação.
@@ -125,30 +125,30 @@ Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do e
 	<img src="./Prints/Captura de tela de 2019-04-23 17-19-08.png"/ >
 	<br>
 </p>
+### Transformação: Espaço do Universo → Espaço da Câmera
 Após, queremos passar do espaço do universo para o espaço da câmera, com os produtos vetoriais que foram explicados anteriormente, isto é, a matriz view.
 <p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-20-34.png"/ >
 	<br>
 </p>
-
-Logo depois, partiremos do espaço da câmera para o espaço de recorte, para isso usamos a matriz de projeção:
+### Transformação: Espaço da Câmera → Espaço Projetivo ou de Recorte
 <p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-20-54.png"/ >
 	<br>
 </p>
-4. Transformação: Espaço de Recorte → Espaço “Canônico” 
+### Transformação: Espaço de Recorte → Espaço “Canônico” 
 E sendo assim, iremos para a tela:
 <p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-24-50.png"/ >
 	<br>
 </p>
-
-5. Transformação: Espaço Canônico → Espaço de Tela
+### Transformação: Espaço Canônico → Espaço de Tela
 <p align="center">
 	<br>
+	<img src="./Prints/Captura de tela de 2019-04-23 17-21-38.png"/ >
 	<img src="./Prints/Captura de tela de 2019-04-23 17-21-24.png"/ >
 	<br>
 </p>
