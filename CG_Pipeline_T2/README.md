@@ -1,5 +1,11 @@
 Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasterização de pontos e linhas. Agora, vamos implementar o pipeline gráfico, que consiste em uma sequência de transformações, ou seja, uma sequência de passos de modelos matemáticos até chegar a rasterização, aplicando rotações, escala e translação.
-imagem
+
+<p align="center">
+	<br>
+	<img src="./prints/1.png"/ width=510px height=540px>
+	<br>
+</p>
+Passos do Pipeline Gráfico
 
 ESPAÇO DO OBJETO: Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
 
@@ -19,7 +25,13 @@ ESPAÇO DA CÂMERA:Expõe os vértices com a câmera na origem. A nossa câmera 
 Obs.: Nesse espaço há a simplificação das projeções 3D para 2D, pois usamos coordenadas homogêneas (esse conceito será visto mais a frente).
 
 Para a construção do sistema de coordenadas da máquina de lavar a câmara, o X está apontando para o seguinte na imagem a seguir:
- imagem
+
+ <p align="center">
+	<br>
+	<img src="./prints/2.png"/ width=510px height=540px>
+	<br>
+</p>
+Coordenadas da Câmera
  
 Diante disso, vamos calcular :
 
@@ -28,7 +40,13 @@ Diante disso, vamos calcular :
    Para calcular o Yc fazemos o produto vetorial de Zc e Xc e dividimos pela norma.
 
 Logo abaixo temos respectivamente essas operações:
-imagem
+
+<p align="center">
+	<br>
+	<img src="./prints/3.png"/ width=510px height=540px>
+	<br>
+</p>
+Transformação View
 
 Sendo assim, temos a Matriz View, na qual leva do espaço do universo para o espaço da câmera. Ela se encarrega da posição e da direção para onde a câmera aponta
 
@@ -48,7 +66,26 @@ Então, B=
 
      |   Xcz    Ycz     Zcz  |
     
-imagem
+<p align="center">
+	<br>
+	<img src="./prints/4.png"/ width=510px height=540px>
+	<br>
+</p>
+Transformação da Matriz View(1)
+
+<p align="center">
+	<br>
+	<img src="./prints/5.png"/ width=510px height=540px>
+	<br>
+</p>
+Transformação da Matriz View(2)
+
+<p align="center">
+	<br>
+	<img src="./prints/6.png"/ width=510px height=540px>
+	<br>
+</p>
+Operação Mview
     
 ESPAÇO DE RECORTE (Clipping): 
 
