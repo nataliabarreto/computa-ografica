@@ -54,7 +54,7 @@ Logo abaixo temos respectivamente essas operações:
 	<br>
 </p>
 
-					Transformação View
+						Transformação View
 
 Sendo assim, temos a Matriz View, na qual leva do espaço do universo para o espaço da câmera. Ela se encarrega da posição e da direção para onde a câmera aponta
 
@@ -80,7 +80,7 @@ Então, B=
 	<br>
 </p>
 
-				Transformação da Matriz View(1)
+					Transformação da Matriz View(1)
 
 <p align="center">
 	<br>
@@ -88,7 +88,7 @@ Então, B=
 	<br>
 </p>
 
-				Transformação da Matriz View(2)
+					Transformação da Matriz View(2)
 
 <p align="center">
 	<br>
@@ -96,11 +96,11 @@ Então, B=
 	<br>
 </p>
 
-				Operação Mview
+						Operação Mview
     
 ## ESPAÇO DE RECORTE (Clipping): 
 
-O espaço de recorte está entre o espaço da câmera e o espaço canônico (definiremos mais a frente).
+O espaço de recorte está entre o espaço da câmera e o espaço canônico.
 
 Sendo assim, temos que após as transformações das nossas primitivas posicionamos nossa câmera e tudo que estiver ao alcance dela é renderizado e o que estiver fora de seu plano é recortado, ou seja, será removido. Isso influencia diretamente no processamento gráfico.
 
@@ -120,8 +120,6 @@ Com as transformações, que podemos aplicar ao nosso objeto devidamente explica
 ### Transformação: Espaço do Objeto → Espaço do Universo
 Vamos sair do espaço do objeto para o espaço do universo (matriz model), isto é, reunir o que temos de objetos em um só espaço para poder visualizar na tela, aplicando as transformações: rotação, translação e escala.
 
-Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do eixo x, matriz de rotação em torno do eixo y, matriz de rotação em torno do eixo z e a matriz de escala e translação.
-
 <p align="left">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-19-08.png"/ >
@@ -129,7 +127,7 @@ Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do e
 </p>
 
 ### Transformação: Espaço do Universo → Espaço da Câmera
-
+A matriz view transforma os vértices do espaço do Universo para o espaço da câmera, composto de uma matrix de translação(T) e uma mudança de base(Bt) sendo aplicado nos 3 pontos da camera(posicao ,look-at , up).
 <p align="leftr">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-20-34.png"/ >
@@ -137,7 +135,7 @@ Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do e
 </p>
 
 ### Transformação: Espaço da Câmera → Espaço Projetivo ou de Recorte
-
+Isto é feito através da multiplicação dos vértices pelo matriz projection. Adiciona uma perspectiva que faz com que o que está mais distante da câmera está menor e o que está mais perto, está maior.
 <p align="left">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-20-54.png"/ >
@@ -145,7 +143,7 @@ Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do e
 </p>
 
 ### Transformação: Espaço de Recorte → Espaço “Canônico” 
-E sendo assim, iremos para a tela:
+É onde ocorrerá o recorte da cena. Como a coordenada homogênea nesse espaço pode ser diferente de 0, iremos simplesmente dividir todas as coordenadas (inclusive a coordenada homogênea) por a coordenada homogênea, isso encarregará de por em perspectiva a cena.
 
 <p align="left">
 	<br>
@@ -154,7 +152,7 @@ E sendo assim, iremos para a tela:
 </p>
 
 ### Transformação: Espaço Canônico → Espaço de Tela
-
+Isto é feito através da multiplicação dos vértices por uma matriz chamada ViewPort, que contém escalas e translações.
 <p align="left">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-21-38.png"/ >
