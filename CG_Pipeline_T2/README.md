@@ -29,7 +29,7 @@ Para a construção do sistema de coordenadas da máquina de lavar a câmara, o 
 
  <p align="center">
 	<br>
-	<img src="./prints/2.png"/ width=510px height=540px>
+	<img src="./Prints/2.png"/ >
 	<br>
 </p>
 
@@ -45,7 +45,7 @@ Logo abaixo temos respectivamente essas operações:
 
 <p align="center">
 	<br>
-	<img src="./prints/3.png"/ width=510px height=540px>
+	<img src="./Prints/3.png"/ >
 	<br>
 </p>
 
@@ -71,7 +71,7 @@ Então, B=
     
 <p align="center">
 	<br>
-	<img src="./prints/4.png"/ width=510px height=540px>
+	<img src="./Prints/4.png"/ >
 	<br>
 </p>
 
@@ -79,7 +79,7 @@ Transformação da Matriz View(1)
 
 <p align="center">
 	<br>
-	<img src="./prints/5.png"/ width=510px height=540px>
+	<img src="./Prints/5.png"/ >
 	<br>
 </p>
 
@@ -87,7 +87,7 @@ Transformação da Matriz View(2)
 
 <p align="center">
 	<br>
-	<img src="./prints/6.png"/ width=510px height=540px>
+	<img src="./Prints/6.png"/ >
 	<br>
 </p>
 
