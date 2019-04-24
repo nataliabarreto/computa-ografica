@@ -113,7 +113,7 @@ Nesse espaço trabalharemos com as coordenadas do espaço canônico e é onde no
 
 
 
-## DESENVOLVIMENTO
+## Desenvolvimento
 
 Com as transformações, que podemos aplicar ao nosso objeto devidamente explicadas iremos usá-las.
 
