@@ -5,6 +5,7 @@ Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasteri
 	<img src="./prints/1.png"/ width=510px height=540px>
 	<br>
 </p>
+
 Passos do Pipeline Gráfico
 
 ESPAÇO DO OBJETO: Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
@@ -31,6 +32,7 @@ Para a construção do sistema de coordenadas da máquina de lavar a câmara, o 
 	<img src="./prints/2.png"/ width=510px height=540px>
 	<br>
 </p>
+
 Coordenadas da Câmera
  
 Diante disso, vamos calcular :
@@ -46,6 +48,7 @@ Logo abaixo temos respectivamente essas operações:
 	<img src="./prints/3.png"/ width=510px height=540px>
 	<br>
 </p>
+
 Transformação View
 
 Sendo assim, temos a Matriz View, na qual leva do espaço do universo para o espaço da câmera. Ela se encarrega da posição e da direção para onde a câmera aponta
@@ -71,6 +74,7 @@ Então, B=
 	<img src="./prints/4.png"/ width=510px height=540px>
 	<br>
 </p>
+
 Transformação da Matriz View(1)
 
 <p align="center">
@@ -78,6 +82,7 @@ Transformação da Matriz View(1)
 	<img src="./prints/5.png"/ width=510px height=540px>
 	<br>
 </p>
+
 Transformação da Matriz View(2)
 
 <p align="center">
@@ -85,6 +90,7 @@ Transformação da Matriz View(2)
 	<img src="./prints/6.png"/ width=510px height=540px>
 	<br>
 </p>
+
 Operação Mview
     
 ESPAÇO DE RECORTE (Clipping): 
