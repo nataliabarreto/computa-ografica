@@ -2,7 +2,7 @@ Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasteri
 
 <p align="center">
 	<br>
-	<img src="./Prints/1.png"/ width=510px height=540px>
+	<img src="./Prints/1.png"/ >
 	<br>
 </p>
 
