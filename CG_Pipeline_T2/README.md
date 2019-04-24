@@ -166,9 +166,9 @@ No fim aplicamos a rasterização no vertices já implementada no primeiro traba
 
 ## Resultado
 
-Logo abaixo temos o resultado final com a comparação do projeto com o disponível pelo professor Christian Pagot.
+Logo abaixo temos o resultado final com a comparação do projeto com o disponível pelo professor Christian Pagot com as funções do OpenGL.
 
-Do lado esquerdo está o do professor e do lado direito o desenvolvido.
+Do lado esquerdo está o modelo disponibilizado e do lado direito o desenvolvido.
 <p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 16-49-10.png"/width=410px height=440px >
@@ -192,7 +192,7 @@ Do lado esquerdo está o do professor e do lado direito o desenvolvido.
 
 ## Dificuldades
 
-Utilizaçao da biblioteca glm para operação de matrizes e vetores.
+Utilizaçao da biblioteca glm para encontrar funções certas para aplicar a operação de matrizes e vetores. 
 
 ## Referências
 
