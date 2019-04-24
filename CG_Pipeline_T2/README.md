@@ -13,7 +13,7 @@ Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasteri
 ## ESPAÇO DO OBJETO:
 Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
 
-O que isso quer dizer? Quer dizer que é nesse espaço que efetuamos as transformações de:Escala, Rotação, Translação, Espelhamento (mirroring), Shear.
+O que isso quer dizer? Quer dizer que é nesse espaço que efetuamos as transformações de:Escala, Rotação, Translação, Shear.
 Essas transformações são realizadas através da manipulação de matrizes e isso é facilitado com o objeto na origem.
 
 Temos aqui a matriz model, na qual leva o objeto do espaço do objeto para o espaço do universo.
@@ -179,4 +179,13 @@ Outros Objetos:
 	<img src="./Prints/Captura de tela de 2019-04-23 16-25-36.png"/width=410px height=440px >
 	<br>
 </p>
+
+## Dificuldades
+
+Utilizaçao da biblioteca glm para operação de matrizes e vetores.
+
+## Referências
+
+-Notas de Aula e exemplo de algoritmo em Octave feito em sala do Professor Christian A. P.
+-https://glm.g-truc.net/0.9.4/api/a00131.html
 
