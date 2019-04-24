@@ -12,9 +12,9 @@ ESPAÇO DO UNIVERSO: Espaço que reúne todos os objetos em um espaço só. É a
 
 ESPAÇO DA CÂMERA:Expõe os vértices com a câmera na origem. A nossa câmera possui:
 
-Posição (px, py, pz)
-Direção (dx, dy, dz)
-Vetor up (ux, uy, uz)
+ Posição (px, py, pz)
+ Direção (dx, dy, dz)
+ Vetor up (ux, uy, uz)
 
 Obs.: Nesse espaço há a simplificação das projeções 3D para 2D, pois usamos coordenadas homogêneas (esse conceito será visto mais a frente).
 
