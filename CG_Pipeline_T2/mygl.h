@@ -251,7 +251,7 @@ glm::mat4 getViewport(glm::mat4 s1,glm::mat4 T, glm::mat4 s2){
 	return s1*T*s2;
 }
 //Transformação: Espaço de Recorte → Espaço “Canônico”
-glm::vec4 Homogeneous(glm::vec4 matrix){
+glm::vec4 homogeneous(glm::vec4 matrix){
 		matrix.x /= matrix.w;
 		matrix.y /= matrix.w;
 		matrix.z /= matrix.w;
