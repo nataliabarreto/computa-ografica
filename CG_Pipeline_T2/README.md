@@ -8,12 +8,12 @@ Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasteri
 	<br>
 </p>
 
-## Partes do Pipeline Gráfico
+## Passos do Pipeline Gráfico
 
 ## ESPAÇO DO OBJETO:
 Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
 
-O que isso quer dizer? Quer dizer que é nesse espaço que efetuamos as transformações de:Escala, Rotação, Translação, Shear.
+O que isso quer dizer? Quer dizer que é nesse espaço que efetuamos as transformações de:Escala, Rotação, Translação, Espelhamento (mirroring), Shear.
 Essas transformações são realizadas através da manipulação de matrizes e isso é facilitado com o objeto na origem.
 
 Temos aqui a matriz model, na qual leva o objeto do espaço do objeto para o espaço do universo.
@@ -28,9 +28,9 @@ Expõe os vértices com a câmera na origem. A nossa câmera possui:
  Direção (dx, dy, dz)
  Vetor up (ux, uy, uz)
 
-Obs.: Nesse espaço há a simplificação das projeções 3D para 2D, pois usamos coordenadas homogêneas (esse conceito será visto mais a frente).
+Obs.: Nesse espaço há a simplificação das projeções 3D para 2D, pois usamos coordenadas homogêneas.
 
-Para a construção do sistema de coordenadas da máquina de lavar a câmara, o X está apontando para o seguinte na imagem a seguir:
+Para a construção do sistema de coordenadas da câmara, usamos a regra da mão direita, onde o X está apontando para dentro na imagem a seguir:
 
  <p align="center">
 	<br>
@@ -54,7 +54,7 @@ Logo abaixo temos respectivamente essas operações:
 	<br>
 </p>
 
-						Transformação View
+					Transformação View
 
 Sendo assim, temos a Matriz View, na qual leva do espaço do universo para o espaço da câmera. Ela se encarrega da posição e da direção para onde a câmera aponta
 
@@ -80,7 +80,7 @@ Então, B=
 	<br>
 </p>
 
-					Transformação da Matriz View(1)
+				Transformação da Matriz View(1)
 
 <p align="center">
 	<br>
@@ -88,7 +88,7 @@ Então, B=
 	<br>
 </p>
 
-					Transformação da Matriz View(2)
+				Transformação da Matriz View(2)
 
 <p align="center">
 	<br>
@@ -96,11 +96,11 @@ Então, B=
 	<br>
 </p>
 
-						Operação Mview
+				Operação Mview
     
 ## ESPAÇO DE RECORTE (Clipping): 
 
-O espaço de recorte está entre o espaço da câmera e o espaço canônico.
+O espaço de recorte está entre o espaço da câmera e o espaço canônico (definiremos mais a frente).
 
 Sendo assim, temos que após as transformações das nossas primitivas posicionamos nossa câmera e tudo que estiver ao alcance dela é renderizado e o que estiver fora de seu plano é recortado, ou seja, será removido. Isso influencia diretamente no processamento gráfico.
 
@@ -117,53 +117,41 @@ Nesse espaço trabalharemos com as coordenadas no espaço canônico e é onde no
 
 Com as transformações, que podemos aplicar ao nosso objeto devidamente explicadas iremos usá-las.
 
-### Transformação: Espaço do Objeto → Espaço do Universo
 Vamos sair do espaço do objeto para o espaço do universo (matriz model), isto é, reunir o que temos de objetos em um só espaço para poder visualizar na tela, aplicando as transformações: rotação, translação e escala.
 
-<p align="left">
+Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do eixo x, matriz de rotação em torno do eixo y, matriz de rotação em torno do eixo z e a matriz de escala e translação.
+<p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-19-08.png"/ >
 	<br>
 </p>
-
-### Transformação: Espaço do Universo → Espaço da Câmera
-A matriz view transforma os vértices do espaço do Universo para o espaço da câmera, composto de uma matrix de translação(T) e uma mudança de base(Bt) sendo aplicado nos 3 pontos da camera(posicao ,look-at , up).
-<p align="leftr">
+Após, queremos passar do espaço do universo para o espaço da câmera, com os produtos vetoriais que foram explicados anteriormente, isto é, a matriz view.
+<p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-20-34.png"/ >
 	<br>
 </p>
 
-### Transformação: Espaço da Câmera → Espaço Projetivo ou de Recorte
-Isto é feito através da multiplicação dos vértices pelo matriz projection. Adiciona uma perspectiva que faz com que o que está mais distante da câmera está menor e o que está mais perto, está maior.
-<p align="left">
+Logo depois, partiremos do espaço da câmera para o espaço de recorte, para isso usamos a matriz de projeção:
+<p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-20-54.png"/ >
 	<br>
 </p>
-
-### Transformação: Espaço de Recorte → Espaço “Canônico” 
-É onde ocorrerá o recorte da cena. Como a coordenada homogênea nesse espaço pode ser diferente de 0, iremos simplesmente dividir todas as coordenadas (inclusive a coordenada homogênea) por a coordenada homogênea, isso encarregará de por em perspectiva a cena.
-
-<p align="left">
+4. Transformação: Espaço de Recorte → Espaço “Canônico” 
+E sendo assim, iremos para a tela:
+<p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 17-24-50.png"/ >
 	<br>
 </p>
 
-### Transformação: Espaço Canônico → Espaço de Tela
-Isto é feito através da multiplicação dos vértices por uma matriz chamada ViewPort, que contém escalas e translações.
-<p align="left">
+5. Transformação: Espaço Canônico → Espaço de Tela
+<p align="center">
 	<br>
-	<img src="./Prints/Captura de tela de 2019-04-23 17-21-38.png"/ >
 	<img src="./Prints/Captura de tela de 2019-04-23 17-21-24.png"/ >
 	<br>
 </p>
-### Rasterização
-No fim aplicamos a rasterização no vertices já implementada no primeiro trabalho
-
-## Resultado
-
 Logo abaixo temos o resultado final com a comparação do projeto com o disponível pelo professor Christian Pagot.
 
 Do lado esquerdo está o do professor e do lado direito o desenvolvido.
@@ -174,26 +162,11 @@ Do lado esquerdo está o do professor e do lado direito o desenvolvido.
 	<br>
 </p>
 
-
-### Outros Objetos:
-
+Outros Objetos:
 <p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 16-23-57.png"/width=410px height=440px >
-	<h5 align="center">Cone</h5>
-</p>
-<p align="center">
-	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 16-25-36.png"/width=410px height=440px >
-	<h5 align="center">Cubo</h5>
+	<br>
 </p>
-
-## Dificuldades
-
-Utilizaçao da biblioteca glm para operação de matrizes e vetores.
-
-## Referências
-
-	- Notas de Aula e exemplo de algoritmo em Octave feito em sala do Professor Christian A. P.
-	- https://glm.g-truc.net/0.9.4/api/a00131.html
 
