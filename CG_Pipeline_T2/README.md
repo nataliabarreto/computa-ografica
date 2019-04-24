@@ -159,7 +159,9 @@ Isto é feito através da multiplicação dos vértices por uma matriz chamada V
 	<img src="./Prints/Captura de tela de 2019-04-23 17-21-24.png"/ >
 	<br>
 </p>
+
 ### Rasterização
+
 No fim aplicamos a rasterização no vertices já implementada no primeiro trabalho
 
 ## Resultado
