@@ -178,9 +178,12 @@ Do lado esquerdo está o do professor e do lado direito o desenvolvido.
 <p align="center">
 	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 16-23-57.png"/width=410px height=440px >
-	<h5 align="left">Cone</h5>
+	<h5 align="center">Cone</h5>
+</p>
+<p align="center">
+	<br>
 	<img src="./Prints/Captura de tela de 2019-04-23 16-25-36.png"/width=410px height=440px >
-	<h5 align="right">Cubo</h5>
+	<h5 align="center">Cubo</h5>
 </p>
 
 ## Dificuldades
