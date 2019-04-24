@@ -56,9 +56,6 @@ O espaço de recorte está entre o espaço da câmera e o espaço canônico (def
 
 Sendo assim, temos que após as transformações das nossas primitivas posicionamos nossa câmera e tudo que estiver ao alcance dela é renderizado e o que estiver fora de seu plano é recortado, ou seja, será removido. Isso influencia diretamente no processamento gráfico.
 
-Abaixo podemos visualizar melhor  o que é realizado nesse espaço:
-imagem
-
 ESPAÇO CANÔNICO:
 
 É nesse espaço que asseguramos o que vai exibir na tela, pois é aqui onde ocorre o mapeamento dos vértices para centralizar o volume obtido no espaço da câmera para o espaço canônico.
