@@ -1,3 +1,5 @@
+#Trabalho 2 - Pipeline Gráfico
+
 Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasterização de pontos e linhas. Agora, vamos implementar o pipeline gráfico, que consiste em uma sequência de transformações, ou seja, uma sequência de passos de modelos matemáticos até chegar a rasterização, aplicando rotações, escala e translação.
 
 <p align="center">
@@ -6,18 +8,21 @@ Esse trabalho é a continuação do trabalho anterior, no qual fizemos a rasteri
 	<br>
 </p>
 
-Passos do Pipeline Gráfico
+##Passos do Pipeline Gráfico
 
-ESPAÇO DO OBJETO: Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
+##ESPAÇO DO OBJETO:
+Modelos tridimensionais que são definidos no seu próprio sistema de coordenadas. É interessante posicionar seu objeto no centro (origem) para facilitar os cálculos nas transformações.
 
 O que isso quer dizer? Quer dizer que é nesse espaço que efetuamos as transformações de:Escala, Rotação, Translação, Espelhamento (mirroring), Shear.
 Essas transformações são realizadas através da manipulação de matrizes e isso é facilitado com o objeto na origem.
 
 Temos aqui a matriz model, na qual leva o objeto do espaço do objeto para o espaço do universo.
 
-ESPAÇO DO UNIVERSO: Espaço que reúne todos os objetos em um espaço só. É através desse espaço que podemos visualizar o objeto na tela.
+##ESPAÇO DO UNIVERSO: 
+Espaço que reúne todos os objetos em um espaço só. É através desse espaço que podemos visualizar o objeto na tela.
 
-ESPAÇO DA CÂMERA:Expõe os vértices com a câmera na origem. A nossa câmera possui:
+##ESPAÇO DA CÂMERA:
+Expõe os vértices com a câmera na origem. A nossa câmera possui:
 
  Posição (px, py, pz)
  Direção (dx, dy, dz)
@@ -33,7 +38,7 @@ Para a construção do sistema de coordenadas da máquina de lavar a câmara, o 
 	<br>
 </p>
 
-Coordenadas da Câmera
+						Coordenadas da Câmera
  
 Diante disso, vamos calcular :
 
@@ -49,7 +54,7 @@ Logo abaixo temos respectivamente essas operações:
 	<br>
 </p>
 
-Transformação View
+					Transformação View
 
 Sendo assim, temos a Matriz View, na qual leva do espaço do universo para o espaço da câmera. Ela se encarrega da posição e da direção para onde a câmera aponta
 
@@ -75,7 +80,7 @@ Então, B=
 	<br>
 </p>
 
-Transformação da Matriz View(1)
+				Transformação da Matriz View(1)
 
 <p align="center">
 	<br>
@@ -83,7 +88,7 @@ Transformação da Matriz View(1)
 	<br>
 </p>
 
-Transformação da Matriz View(2)
+				Transformação da Matriz View(2)
 
 <p align="center">
 	<br>
@@ -91,24 +96,24 @@ Transformação da Matriz View(2)
 	<br>
 </p>
 
-Operação Mview
+				Operação Mview
     
-ESPAÇO DE RECORTE (Clipping): 
+##ESPAÇO DE RECORTE (Clipping): 
 
 O espaço de recorte está entre o espaço da câmera e o espaço canônico (definiremos mais a frente).
 
 Sendo assim, temos que após as transformações das nossas primitivas posicionamos nossa câmera e tudo que estiver ao alcance dela é renderizado e o que estiver fora de seu plano é recortado, ou seja, será removido. Isso influencia diretamente no processamento gráfico.
 
-ESPAÇO CANÔNICO:
+##ESPAÇO CANÔNICO:
 
 É nesse espaço que asseguramos o que vai exibir na tela, pois é aqui onde ocorre o mapeamento dos vértices para centralizar o volume obtido no espaço da câmera para o espaço canônico.
 
-ESPAÇO DE TELA:
+##ESPAÇO DE TELA:
 Nesse espaço trabalharemos com as coordenadas no espaço canônico e é onde nosso objeto irá ser rasterizado.
 
 
 
-DESENVOLVIMENTO
+##DESENVOLVIMENTO
 
 Com as transformações, que podemos aplicar ao nosso objeto devidamente explicadas iremos usá-las.
 
