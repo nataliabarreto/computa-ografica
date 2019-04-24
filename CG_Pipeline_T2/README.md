@@ -30,7 +30,7 @@ Expõe os vértices com a câmera na origem. A nossa câmera possui:
 
 Obs.: Nesse espaço há a simplificação das projeções 3D para 2D, pois usamos coordenadas homogêneas (esse conceito será visto mais a frente).
 
-Para a construção do sistema de coordenadas da máquina de lavar a câmara, o X está apontando para o seguinte na imagem a seguir:
+Para a construção do sistema de coordenadas da câmera usamos a regra da mão direita, onde o X está apontando para dentro na imagem a seguir:
 
  <p align="center">
 	<br>
