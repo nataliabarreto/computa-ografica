@@ -42,13 +42,13 @@ Para a construção dessa matriz usamos as coordenadas encontradas anteriormente
 
 Então,
 
-   |   Xcx    Ycx    Zcx   |
+    |   Xcx    Ycx    Zcx   |
 
-B =|   Xcy    Ycy     Zcy  |
+B = |   Xcy    Ycy     Zcy  |
 
-   |   Xcz    Ycz     Zcz  |
+    |   Xcz    Ycz     Zcz  |
     
-    imagem
+imagem
     
 ESPAÇO DE RECORTE (Clipping): 
 
