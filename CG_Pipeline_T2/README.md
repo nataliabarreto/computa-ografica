@@ -186,6 +186,6 @@ Utilizaçao da biblioteca glm para operação de matrizes e vetores.
 
 ## Referências
 
--Notas de Aula e exemplo de algoritmo em Octave feito em sala do Professor Christian A. P.
--https://glm.g-truc.net/0.9.4/api/a00131.html
+	- Notas de Aula e exemplo de algoritmo em Octave feito em sala do Professor Christian A. P.
+	- https://glm.g-truc.net/0.9.4/api/a00131.html
 
