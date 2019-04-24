@@ -40,13 +40,13 @@ Para a construção dessa matriz usamos as coordenadas encontradas anteriormente
 
 (Zcx, Zcy, Zcz)
 
-Então,
+Então, B=
 
-    |   Xcx    Ycx    Zcx   |
+     |   Xcx    Ycx    Zcx   |
 
-B = |   Xcy    Ycy     Zcy  |
+     |   Xcy    Ycy     Zcy  |
 
-    |   Xcz    Ycz     Zcz  |
+     |   Xcz    Ycz     Zcz  |
     
 imagem
     
