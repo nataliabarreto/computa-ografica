@@ -119,23 +119,54 @@ Com as transformações, que podemos aplicar ao nosso objeto devidamente explica
 
 Vamos sair do espaço do objeto para o espaço do universo (matriz model), isto é, reunir o que temos de objetos em um só espaço para poder visualizar na tela, aplicando as transformações: rotação, translação e escala.
 
-Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do eixo x, matriz de rotação em torno do eixo y, matriz de rotação em torno do eixo z e a matriz de escala.
-
+Sendo assim, escrevemos a matriz de posição, matriz de rotação em torno do eixo x, matriz de rotação em torno do eixo y, matriz de rotação em torno do eixo z e a matriz de escala e translação.
+<p align="center">
+	<br>
+	<img src="./Prints/Captura de tela de 2019-04-23 17-19-08.png"/ >
+	<br>
+</p>
 Após, queremos passar do espaço do universo para o espaço da câmera, com os produtos vetoriais que foram explicados anteriormente, isto é, a matriz view.
-
-(coloca essa matriz aqui)
+<p align="center">
+	<br>
+	<img src="./Prints/Captura de tela de 2019-04-23 17-20-34.png"/ >
+	<br>
+</p>
 
 Logo depois, partiremos do espaço da câmera para o espaço de recorte, para isso usamos a matriz de projeção:
-(coloca essa matriz aqui)
-
+<p align="center">
+	<br>
+	<img src="./Prints/Captura de tela de 2019-04-23 17-20-54.png"/ >
+	<br>
+</p>
+4. Transformação: Espaço de Recorte → Espaço “Canônico” 
 E sendo assim, iremos para a tela:
-(coloca essa matriz aqui)
+<p align="center">
+	<br>
+	<img src="./Prints/Captura de tela de 2019-04-23 17-24-50.png"/ >
+	<br>
+</p>
 
-Realizada todas essas aplicações podemos gerar o nosso objeto:
-(coloca o objeto gerado)
-
+5. Transformação: Espaço Canônico → Espaço de Tela
+<p align="center">
+	<br>
+	<img src="./Prints/Captura de tela de 2019-04-23 17-21-24.png"/ >
+	<br>
+</p>
 Logo abaixo temos o resultado final com a comparação do projeto com o disponível pelo professor Christian Pagot.
 
 Do lado esquerdo está o do professor e do lado direito o desenvolvido.
+<p align="center">
+	<br>
+	<img src="./Prints/Captura de tela de 2019-04-23 16-49-10.png"/width=410px height=440px >
+	<img src="./Prints/Captura de tela de 2019-04-23 16-50-33.png"/width=410px height=440px >
+	<br>
+</p>
 
-(coloca a comparação dos objetos)
+Outros Objetos:
+<p align="center">
+	<br>
+	<img src="./Prints/Captura de tela de 2019-04-23 16-23-57.png"/width=410px height=440px >
+	<img src="./Prints/Captura de tela de 2019-04-23 16-25-36.png"/width=410px height=440px >
+	<br>
+</p>
+
